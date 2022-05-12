@@ -1,0 +1,40 @@
+<div class='row'>
+    <div class="col-12 col-lg-6 offset-lg-3 text-center">
+        <h1>Register</h1>
+        <p>Please fill out the form to create an account.</p>
+
+        <form id="registerForm" class="row text-start">
+            <div class="mb-3">
+                <label for="username" class="form-label fw-bold">Username*</label>
+                <input type="text" class="form-control" id="userName" minlength="<%= process.env.MIN_USERNAME_LENGTH %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label fw-bold">
+                    Password*
+                    <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-placement="right" title="<ul class='mb-0 text-start'><li>at least 10 characters</li><li>uppercase character</li><li>lowercase character</li><li>numeric character</li><li>special character</li></ul>" data-bs-original-title=""></i>
+                </label>
+                <input type="password" class="form-control mb-1" id="password" placeholder="Password" pattern="<%= process.env.PASSWORD_REGEX_PATTERN %>" required>
+                <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm Password" pattern="<%= process.env.PASSWORD_REGEX_PATTERN %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email*</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="fullname" class="form-label fw-bold">Full Name</label>
+                <input type="text" class="form-control" id="fullName">
+            </div>
+
+            <div class="mb-3">
+                <ul id="registerError" class="d-none text-danger text-center list-unstyled"></ul>
+                <p id="registerSuccess" class="d-none text-success text-center">Registration complete! Redirecting to <a href="/login">login</a> page...</p>
+            </div>
+
+            <div class="text-center">
+                <button id="register" class="btn btn-secondary" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/events/RegisterScriptBundled.js"></script>

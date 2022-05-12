@@ -1,0 +1,15 @@
+<div class='row'>
+    <div class="col-12 col-lg-6 offset-lg-3 text-center">
+        <h1>Confirm your account</h1>
+
+        <% if (success) { %>
+            <p id="confirmAccountSuccess" class="text-success text-center">
+                Your account has been confirmed!<br />Go to <a href="/login">login</a> page.
+            </p>
+        <% } else { %>
+            <p id="confirmAccountError" class="text-danger text-center">
+                <%= message %>
+            </p>
+        <% } %>
+    </div>
+</div>

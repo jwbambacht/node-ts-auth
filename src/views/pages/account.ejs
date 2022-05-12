@@ -1,0 +1,92 @@
+<div class='row'>
+    <div class="col-12">
+        <h1>My Account</h1>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="card">
+                    <h3 class="card-header">Profile</h3>
+                    <div class="card-body">
+                        <form id="updateProfileForm">
+                            <div class="mb-3">
+                                <label for="userName" class="form-label fw-bold">Username*
+                                    <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-placement="right" title="min. 6 characters" data-bs-original-title=""></i>
+                                </label>
+                                <input type="text" class="form-control" id="userName" value="<%= user.userName %>" minlength="<%= process.env.MIN_USERNAME_LENGTH %>" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Email*</label>
+                                <input type="email" class="form-control" id="email" value="<%= user.private.email %>" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-bold">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" value="<%= user.private.fullName %>">
+                            </div>
+
+                            <div class="d-flex justify-content-between align-self-center">
+                                <div>
+                                    <ul id="updateProfileError" class="d-none text-danger list-unstyled text-start"></ul>
+                                    <div id="updateProfileSuccess" class="d-none text-success">Profile updated!</div>
+                                </div>
+                                <div>
+                                    <button id="saveProfile" class="btn btn-secondary" type="submit">Save</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <h3 class="card-header">Password</h3>
+                    <div class="card-body">
+                        <form id="updatePasswordForm">
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label fw-bold">Current Password*</label>
+                                <input type="password" class="form-control" id="currentPassword" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label fw-bold">
+                                    New Password*
+                                    <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-placement="right" title="<ul class='mb-0 text-start'><li>at least 10 characters</li><li>uppercase character</li><li>lowercase character</li><li>numeric character</li><li>special character</li></ul>" data-bs-original-title=""></i>
+                                </label>
+                                <input type="password" class="form-control" id="newPassword" pattern="<%= process.env.PASSWORD_REGEX_PATTERN %>" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="newPasswordConfirm" class="form-label fw-bold">
+                                    New Password Confirm*
+                                    <i class="bi bi-info-circle-fill" data-bs-toggle="tooltip" data-bs-placement="right" title="<ul class='mb-0 text-start'><li>at least 10 characters</li><li>uppercase character</li><li>lowercase character</li><li>numeric character</li><li>special character</li></ul>" data-bs-original-title=""></i>
+                                </label>
+                                <input type="password" class="form-control" id="newPasswordConfirm" pattern="<%= process.env.PASSWORD_REGEX_PATTERN %>" required>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-self-center">
+                                <div>
+                                    <ul id="updatePasswordError" class="d-none text-danger list-unstyled text-start"></ul>
+                                    <div id="updatePasswordSuccess" class="d-none text-success">Password updated!</div>
+                                </div>
+                                <div>
+                                    <button id="savePassword" class="btn btn-secondary" type="submit">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-center">
+                <button id="deleteAccount" class="btn btn-link text-danger">Delete account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/events/AccountScriptBundled.js"></script>
