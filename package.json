@@ -1,5 +1,5 @@
 {
-  "name": "nodets",
+  "name": "node-ts-auth",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwbambacht/NodeTS.git"
+    "url": "git+https://github.com/jwbambacht/node-ts-auth.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jwbambacht/NodeTS/issues"
+    "url": "https://github.com/jwbambacht/node-ts-auth/issues"
   },
-  "homepage": "https://github.com/jwbambacht/NodeTS#readme",
+  "homepage": "https://github.com/jwbambacht/node-ts-auth#readme",
   "keywords": [],
   "dependencies": {
     "bcryptjs": "^2.4.3",
