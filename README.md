@@ -1,4 +1,5 @@
 # Full-stack authenticated web-application with NodeJS and TypeScript
+See [node-ts-unauth](https://github.com/jwbambacht/node-ts-unauth) for an unauthenticated version of this web-application.
 
 ## Characteristics:
 * TypeScript for static typing and easier and quicker debugging and development
@@ -8,7 +9,7 @@
 * typeORM for managing the database interactions to PostgreSQL
 * typedi for services as Singleton-like classes in containers
 * Routing-controllers for REST routes in express 
-* Authentication with username, password and sessions integrated in express with routing-controllers authorization and current user checker. Basic functionalities as registration, forgot password, and confirm account are integrated as well
+* Authentication with username, password and sessions integrated in express with routing-controllers authorization and current user checker. Basic functionalities as registration, forgot password, and confirm account are integrated as well.
 * DotEnv for system configuration in the ```.env``` file. Rename the ```.env.example``` file and insert your own settings
 * class-transformer and class-validator to transform and validate class instantiations from plain JSON objects
 * nodemailer to send emails
