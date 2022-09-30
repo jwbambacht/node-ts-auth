@@ -1,9 +1,9 @@
-# Full-stack authenticated web-application with NodeJS and TypeScript
+# Boilerplate for Full-stack Authenticated Web Application for NodeJS and TypeScript
 See [node-ts-unauth](https://github.com/jwbambacht/node-ts-unauth) for an unauthenticated version of this web-application.
 
-## Characteristics:
+## Features:
 * TypeScript for static typing and easier and quicker debugging and development
-* Full-stack frontend and backend (API) in node
+* Frontend and backend server-side rendering + API in node
 * Express web application framework loaded in ```expressLoader.ts``` in combination with the EJS templating engine in the ```views``` directory.
 * Bootstrap for responsive mobile-first layouts
 * typeORM for managing the database interactions to PostgreSQL
@@ -26,7 +26,7 @@ See [node-ts-unauth](https://github.com/jwbambacht/node-ts-unauth) for an unauth
 6. Run ```npm run dev``` to build and start the application with active file monitoring
 
 ### Scripts
-The following scripts can run using ```npm run ${script}```:
+The following scripts can run using ```npm start``` or ```npm run ${script}```:
 * ```clean```: removes the build (```dist```) directory
 * ```copy-assets```: copies the ```views``` and ```assets``` directories to the ```dist``` directory
 * ```lint```: fires the linter for all ```.js``` and ```.ts``` files
@@ -60,7 +60,7 @@ The services allow you to use Singleton instances application-wide that are cont
 The controllers define the routes inside the application, both frontend and backend. The frontend routes are defined in ```RouteController```. These pages are rendered using express and EJS. The ```UserController``` and ```AuthController``` define API routes that are accessible using the JavaScript fetch function or using REST calls.  
 
 ### Events
-The event scripts define the functionality on the frontend pages. These scripts are compiled, bundled and placed in the ```dist``` directory as well.
+The event scripts define the functionality for the frontend pages. These scripts are compiled, bundled and placed in the ```dist``` directory as well.
 
 ### Views
 The fronted views are defined in the ```views``` directory. The ```index.ejs``` include the partials ```head```, ```nav```, ```footer``` and ```scripts```, and the corresponding page template. Each page includes its own script to not unnecessarily slow down the application. The mail templates are also defined in the ```views``` directory and likewise use EJS. 
